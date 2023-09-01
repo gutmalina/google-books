@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/google-books/static/css/main.8f1c94d4.css",
+    "main.js": "/google-books/static/js/main.868c6c70.js",
+    "index.html": "/google-books/index.html",
+    "main.8f1c94d4.css.map": "/google-books/static/css/main.8f1c94d4.css.map",
+    "main.868c6c70.js.map": "/google-books/static/js/main.868c6c70.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8f1c94d4.css",
+    "static/js/main.868c6c70.js"
+  ]
+}
