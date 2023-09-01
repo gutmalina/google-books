@@ -17,6 +17,7 @@ const InputList: FC<TInputList> = ({ list }) => {
     setIsShowList(!isShowList);
   };
 
+  /** записать категории в хранилище */
   const handleClick = (item: string) => {
     list === CATEGORIES
       ? dispatch(addCategory(item))
@@ -31,8 +32,13 @@ const InputList: FC<TInputList> = ({ list }) => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.container} onClick={handleShowList}>
-        <input type="text" defaultValue={valueInput} className={styles.input} readOnly></input>
-        <Arrow  />
+        <input
+          type="text"
+          defaultValue={valueInput}
+          className={styles.input}
+          readOnly
+        ></input>
+        <Arrow />
       </div>
       {isShowList ? (
         <ul className={styles.list}>

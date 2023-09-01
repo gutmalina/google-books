@@ -9,7 +9,6 @@ const Library = () => {
         width="100vw"
         height="100vh"
         viewBox="0 0 640 427"
-        // enableBackground="new 0 0 640 427"
         xmlSpace="preserve"
         preserveAspectRatio="xMidYMid slice"
       >

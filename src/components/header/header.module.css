@@ -8,10 +8,6 @@
   gap: 20px;
 }
 
-.title {
- 
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(2, max-content);

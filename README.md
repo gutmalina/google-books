@@ -1,7 +1,7 @@
-# Тестовое задание на вакансию Фронтенд разработчик (Sagirov)
+# Тестовое задание на вакансию Фронтенд разработчик
 
 <p padding="0" align="center">~~~~~~~~~~</p>
-<a  href="https://gutmalina.github.io/sagirov_mask/" target="_blank" align="center"><img src="./src/images/videogift.gif" width="100%" alt="Демо"></a>
+<a  href="https://gutmalina.github.io/google-books/" target="_blank" align="center"><img src="./src/images/videogift.gif" width="100%" alt="Демо"></a>
 <p padding="0" align="center">~~~~~~~~~~</p>
 
 ### Стэк:
@@ -37,4 +37,4 @@
 
 
 ### Ссылки:
-* :mag_right: [Открыть проект](https://gutmalina.github.io/sagirov_mask/)
+* :mag_right: [Открыть проект](https://gutmalina.github.io/google-books/)

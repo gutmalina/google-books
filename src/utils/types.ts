@@ -14,6 +14,36 @@ export type TParamRequest = {
   sorting: string;
 };
 
+export type TPropsCard = {
+  card: TBookInfo;
+};
+
+export type TBookInfo = {
+  allowAnonLogging: boolean;
+  authors: string[];
+  canonicalVolumeLink: string;
+  categories: string[];
+  contentVersion: string;
+  comicsContent: boolean;
+  description: string;
+  industryIdentifiers: [{ type: string; identifier: string }];
+  infoLink: string;
+  imageLinks: { smallThumbnail: string; thumbnail: string };
+  language: string;
+  maturityRating: string;
+  pageCount: number;
+  panelizationSummary: {
+    containsEpubBubbles: boolean;
+    containsImageBubbles: boolean;
+  };
+  previewLink: string;
+  printType: string;
+  publisher: string;
+  publishedDate: string;
+  readingModes: { text: boolean; image: boolean };
+  title: string;
+};
+
 export type TBook = {
   accessInfo: {
     accessViewStatus: string;
@@ -43,26 +73,5 @@ export type TBook = {
     textSnippet: string;
   };
   selfLink: string;
-  volumeInfo: {
-    allowAnonLogging: boolean;
-    authors: string[];
-    canonicalVolumeLink: string;
-    categories: string[];
-    contentVersion: string;
-    description: string;
-    industryIdentifiers: [{ type: string; identifier: string }];
-    infoLink: string;
-    language: string;
-    maturityRating: string;
-    pageCount: number;
-    panelizationSummary: {
-      containsEpubBubbles: boolean;
-      containsImageBubbles: boolean;
-    };
-    previewLink: string;
-    printType: string;
-    publishedDate: string;
-    readingModes: { text: boolean; image: boolean };
-    title: string;
-  };
+  volumeInfo: TBookInfo;
 };

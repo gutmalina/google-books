@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { ALT_BOOK_COVER } from "../../utils/constants";
 import styles from "./card.module.css";
+import { TPropsCard } from "../../utils/types";
 
-const Card = ({ card }: any) => {
-  const [authorList, setAuthorList] = useState();
+const Card: FC<TPropsCard> = ({ card }) => {
+  const [authorList, setAuthorList] = useState("");
 
   useEffect(() => {
     card.authors && setAuthorList(card.authors.join(", "));

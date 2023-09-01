@@ -15,6 +15,7 @@ const Search = () => {
   const sorting = useAppSelector((store) => store.sorting);
   const dispatch = useAppDispatch();
 
+  /** запрос к API */
   const handleSubmit = (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
     dispatch(addSearch(search));
