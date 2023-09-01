@@ -1,0 +1,25 @@
+.wrapper {
+  height: 65vh;
+  overflow-y: scroll;
+  z-index: 2;
+  position: relative;
+  background: var(--color-primary-white);
+  box-shadow: inset 0px 0px 10px 3px var(--colot-primary-grey);
+}
+
+.title,
+.title_error {
+  text-align: center;
+  margin: 10px auto;
+}
+
+.title_error {
+  color: red;
+}
+
+.group_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}

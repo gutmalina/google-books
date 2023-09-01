@@ -1,0 +1,28 @@
+.wrapper {
+  background: rgb(71, 74, 81, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 350px;
+}
+
+.img,
+.plug_img {
+  margin: 10px 20px;
+  box-shadow: 12px 6px 27px 2px var(--colot-primary-grey);
+  height: 60%;
+}
+
+.title,
+.subtitle_type_author {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.subtitle {
+  text-decoration: underline;
+}

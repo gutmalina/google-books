@@ -1,0 +1,27 @@
+.wrapper {
+  color: var(--color-primary-white);
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.title {
+ 
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 20px;
+  align-items: center;
+  justify-items: end;
+}
+
+.group_search {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
