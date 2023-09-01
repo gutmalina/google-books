@@ -27,16 +27,21 @@ const Main = () => {
         );
       });
     setRenderBooks(arr);
+    setTitle(`Founds ${arr.length} results`)
   }, [category, books]);
 
-  useEffect(() => {
-    setTitle(`Founds ${total} results`);
-  }, [total]);
+  // useEffect(() => {
+  //   setTitle(`Founds ${total} results`);
+  // }, [total]);
 
   /** установка массива для отрисовки в зависимости от категории */
   useEffect(() => {
-    category === CATEGORY_ALL ? setRenderBooks(books) : filterBooks();
-  }, [category, filterBooks, books]);
+    if(category === CATEGORY_ALL){
+      setRenderBooks(books)
+      setTitle(`Founds ${total} results`);
+    }else{
+      filterBooks()}
+  }, [category, filterBooks, books, total]);
 
   /** монтирование компонента */
   useEffect(() => {

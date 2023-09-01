@@ -14,7 +14,7 @@ export const getBooks = createAsyncThunk(
         `${BASE_URL}volumes?q=${search}&printType=books&orderBy=${sorting}&startIndex=${start}&maxResults=30&key=${keyAPI}`
       );
       const data = await response.json();
-
+      
       if (!data.error) {
         return data;
       } else {
@@ -80,13 +80,15 @@ const catalog = createSlice({
       state.error = null;
     });
     builder.addCase(getBooks.fulfilled, (state, { payload }) => {
-      if (payload) {
+      if (payload.items) {
         if (!state.books) {
-          state.books = payload.items;
+          state.books = payload.items
         } else {
           state.books = state.books.concat(payload.items);
         }
         state.total = payload.totalItems;
+      }else{
+        state.books = []
       }
       state.preloader = false;
     });
