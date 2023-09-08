@@ -14,10 +14,6 @@ export type TParamRequest = {
   sorting: string;
 };
 
-export type TPropsCard = {
-  card: TBookInfo;
-};
-
 export type TBookInfo = {
   allowAnonLogging: boolean;
   authors: string[];

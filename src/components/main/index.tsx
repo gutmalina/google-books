@@ -4,12 +4,14 @@ import Card from "../card";
 import styles from "./main.module.css";
 import { TBook } from "../../utils/types";
 import { CATEGORY_ALL } from "../../utils/constants";
+import Preloader from "../preloader";
 
 const Main = () => {
   const books = useAppSelector((store) => store.books);
   const total = useAppSelector((store) => store.total);
   const category = useAppSelector((store) => store.category);
   const error = useAppSelector((store) => store.error);
+  const preloader = useAppSelector((store) => store.preloader);
   const [title, setTitle] = useState("");
   const [renderBooks, setRenderBooks] = useState<TBook[]>([]);
 
@@ -29,10 +31,6 @@ const Main = () => {
     setRenderBooks(arr);
     setTitle(`Founds ${arr.length} results`)
   }, [category, books]);
-
-  // useEffect(() => {
-  //   setTitle(`Founds ${total} results`);
-  // }, [total]);
 
   /** установка массива для отрисовки в зависимости от категории */
   useEffect(() => {
@@ -59,6 +57,7 @@ const Main = () => {
           : null}
       </div>
       {error ? <h2 className={styles.title_error}>ERROR: {error}</h2> : null}
+      {preloader ? <Preloader/> : null}
     </main>
   );
 };

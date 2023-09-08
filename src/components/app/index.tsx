@@ -6,7 +6,7 @@ import Library from "../../images/library";
 import { useAppSelector } from "../../services/hooks";
 
 const App = () => {
-  const preloader = useAppSelector((store) => store.preloader);
+  const card = useAppSelector((store) => store.card);
 
   return (
     <>
@@ -14,7 +14,7 @@ const App = () => {
       <Header />
       <Main />
       <Footer />
-      {preloader ? <Modal /> : null}
+      {card ? <Modal /> : null}
     </>
   );
 };

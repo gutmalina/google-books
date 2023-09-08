@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  height: 75vh;
+  background: var(--color-primary-white);
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.container_img {
+  background: rgb(71, 74, 81, 0.1);
+  display: flex;
+  justify-content: center;
+  padding: 50px 30px;
+}
+
+.container_text {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subtitle {
+  text-decoration: underline;
+}
+
+.content {
+  padding: 20px;
+  border: 1px solid var(--colot-primary-grey);
+  min-height: 30%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden auto;
+  max-height: 60%;
+}

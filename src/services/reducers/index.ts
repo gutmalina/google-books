@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { BASE_URL } from "../../utils/config";
-import { TParamRequest, TBook } from "../../utils/types";
+import { TParamRequest, TBook, TBookInfo } from "../../utils/types";
 
 const keyAPI = process.env.REACT_APP_API_KEY || "/";
 
@@ -27,21 +27,23 @@ export const getBooks = createAsyncThunk(
 );
 
 interface ICatalog {
-  books: TBook[];
-  total: number;
-  preloader: boolean;
-  error: any;
-  category: string;
-  sorting: string;
-  search: string;
-  startIndex: number;
+  books: TBook[],
+  card: any,
+  total: number,
+  preloader: boolean,
+  error: string | undefined,
+  category: string,
+  sorting: string,
+  search: string,
+  startIndex: number,
 }
 
 const initialState: ICatalog = {
   books: [],
+  card: null,
   total: 0,
   preloader: false,
-  error: null,
+  error: '',
   category: "all",
   sorting: "relevance",
   search: "",
@@ -71,13 +73,19 @@ const catalog = createSlice({
       state.books = [];
       state.total = 0;
     },
+    addCard(state, action){
+      state.card = action.payload;
+    },
+    deleteCard(state){
+      state.card = null;
+    }
   },
 
   extraReducers: (builder) => {
     /** getBooks */
     builder.addCase(getBooks.pending, (state) => {
       state.preloader = true;
-      state.error = null;
+      state.error = '';
     });
     builder.addCase(getBooks.fulfilled, (state, { payload }) => {
       if (payload.items) {
@@ -106,6 +114,8 @@ export const {
   addSearch,
   addStartIndex,
   deleteBooks,
+  addCard,
+  deleteCard
 } = catalog.actions;
 
 export default catalog.reducer;

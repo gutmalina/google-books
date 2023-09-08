@@ -6,6 +6,7 @@
   flex-direction: column;
   gap: 5px;
   max-width: 350px;
+  cursor: pointer;
 }
 
 .img,
